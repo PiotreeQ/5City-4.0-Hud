@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.1.1/css/pro.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>5City 4.0 Hud</title>
+</head>
+<body>
+    <div class="notify-wrapper" id="notify-wrapper">
+    </div>
+    <div class="street-wrapper">
+        <img src="img/location.svg" alt="">
+        <span id="car-street">San Vitus Blvd</span>
+        <div class="direction-box">N</div>
+    </div>
+    <div class="main-wrapper">
+        <div class="car-hud-wrapper">
+            <div class="car-hud-main">
+                <div class="car-hud-items">
+                    <div class="car-hud-box" id="car-engine">
+                        <img src="img/engine.svg" alt="">
+                    </div>
+                    <div class="car-hud-box" id="car-belt">
+                        <img src="img/belt.svg" alt="">
+                    </div>
+                </div>
+                <span class="car-hud-speed" id="car-speed">100</span>
+                <span>MPH</span>
+            </div>
+            <svg id="hud-box" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+                <rect id="fuelx" x="10" y="10" width="180" height="180" fill="#060606" stroke="var(--fuel)" stroke-width="15" stroke-dasharray="0, 1000"></rect>
+                <text x="50%" y="52%" text-anchor="middle" dy=".3em" class="fa" id="fuel">&#xf52f;</text>
+            </svg>
+        </div>
+        <div class="main-hud-wrapper">
+            <svg id="hud-box" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+                <rect id="healthx" x="10" y="10" width="180" height="180" fill="#060606" stroke="var(--health)" stroke-width="15" stroke-dasharray="0, 1000"></rect>
+                <text x="50%" y="52%" text-anchor="middle" dy=".3em" class="fa" id="health">&#xf004;</text>
+            </svg>
+            <svg id="hud-box" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+                <rect id="hungerx" x="10" y="10" width="180" height="180" fill="#060606" stroke="var(--hunger)" stroke-width="15" stroke-dasharray="0, 1000"></rect>
+                <text x="50%" y="52%" text-anchor="middle" dy=".3em" class="fa" id="hunger">&#xf805;</text>
+            </svg>
+            <svg id="hud-box" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+                <rect id="thirstx" x="10" y="10" width="180" height="180" fill="#060606" stroke="var(--thirst)" stroke-width="15" stroke-dasharray="0, 1000"></rect>
+                <text x="50%" y="52%" text-anchor="middle" dy=".3em" class="fa" id="thirst">&#xf869;</text>
+            </svg>
+            <svg id="hud-box" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+                <rect id="voicex" x="10" y="10" width="180" height="180" fill="#060606" stroke="var(--voice)" stroke-width="15" stroke-dasharray="0, 1000"></rect>
+                <text x="50%" y="52%" text-anchor="middle" dy=".3em" class="fa" id="voice">&#xf6a8;</text>
+            </svg>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>

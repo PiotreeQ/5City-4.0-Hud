@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&display=swap');
+
+@font-face {
+    font-family: 'Digital';
+    src: url('fonts/DS-DIGI.TTF');
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: min(.83333333vw, 1.8009478673vh);
+    transition: font-size .15s linear;
+    --bg-color: #060606;
+    --health: #CC245C;
+    --hunger: #E79557;
+    --thirst: #5C7DF2;
+    --voice: #542398;
+    --fuel: #EBFF6A;
+    --warning: rgb(178, 14, 14);
+    --info: #8D3AFE;
+    --success: rgb(27, 175, 27);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    color: #fff;
+}
+
+.main-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1.75rem;
+}
+
+.main-hud-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transform: translateX(150%);
+    transition: all 750ms ease-in-out;
+    /* border: 1px solid red; */
+}
+
+#hud-box {
+    width: 3.5rem;
+    height: 3.5rem;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.9) 0px 18px 36px -18px inset;
+    border-radius: .25rem;
+}
+
+.fa {
+    fill: white;
+    font-weight: 300;
+    font-size: 5.5rem;
+}
+
+#health {
+    fill: var(--health);
+    text-shadow: 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health), 0px 0px 1vw var(--health);
+}
+
+#hunger {
+    fill: var(--hunger);
+    text-shadow: 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger), 0px 0px 1vw var(--hunger);
+}
+
+#thirst {
+    fill: var(--thirst);
+    text-shadow: 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst), 0px 0px 1vw var(--thirst);
+}
+
+#voice {
+    fill: var(--voice);
+    text-shadow: 0px 0px 1rem var(--voice), 0px 0px 1rem var(--voice), 0px 0px 1rem var(--voice), 0px 0px 1rem var(--voice), 0px 0px 1rem var(--voice), 0px 0px 1rem var(--voice), 0px 0px 1rem var(--voice), 0px 0px 1rem var(--voice);
+}
+
+#fuel {
+    fill: var(--fuel);
+    text-shadow: 0px 0px 1.25vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1.5vw var(--fuel), 0px 0px 1vw var(--fuel);
+}
+
+.hud-box-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .35rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    background-color: var(--box-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hud-box img {
+    width: 2.5rem;
+}
+
+.hud-fill {
+    background-color: #000;
+    width: 50%;
+    height: 100%;
+    border-radius: .35rem;
+}
+
+.car-hud-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: .75rem;
+    transform: translateY(150%);
+    transition: all 750ms ease-in-out;
+}
+
+.car-hud-main {
+    background: linear-gradient(190deg, rgb(20, 17, 30) 0%, rgb(50, 31, 87) 100%);
+    border: .25rem solid #67279b;
+    border-radius: .5rem;
+    padding: .75rem;
+    display: flex;
+    align-items: center;
+}
+
+.car-hud-items {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.car-hud-items .car-hud-box {
+    background-color: #8907ed;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+}
+
+.car-hud-items img {
+    width: 1rem;
+}
+
+.car-hud-speed {
+    position: relative;
+    font-size: 4rem;
+    margin-left: 1rem;
+    font-family: 'Digital', sans-serif !important;
+    letter-spacing: .25rem;
+    text-shadow: 0 0 .25rem #fff;
+    z-index: 1;
+    width: 6.75rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.car-hud-speed::before {
+    content: '000';
+    position: absolute;
+    opacity: 0.15;
+    left: 0;
+}
+
+.car-hud-main>span:last-child {
+    align-self: flex-end;
+    margin-bottom: .5rem;
+    margin-left: .25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+}
+
+.street-wrapper {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 20.5%;
+    background: linear-gradient(190deg, rgb(20, 17, 30) 0%, rgb(50, 31, 87) 100%);
+    border: .25rem solid #67279b;
+    border-radius: .5rem;
+    padding: .75rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 17.5rem;
+    transition: all 750ms ease-in-out;
+    transform: translateX(-150%);
+}
+
+.street-wrapper img {
+    width: 1.5rem;
+}
+
+.street-wrapper span {
+    font-weight: 700;
+}
+
+.direction-box {
+    background-color: #8907ed;
+    margin-left: auto;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+    font-weight: 600;
+    font-size: .85rem;
+}
+
+.notify-wrapper {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    display: flex; flex-direction: column; gap: .25rem; align-items: flex-end;
+}
+
+.notification {
+    position: relative;
+    display: flex; align-items: center; gap: .75rem;
+    padding: .75rem 1rem;
+    border-radius: .15rem;
+    border-radius: .25rem; font-weight: 600;
+    width: fit-content;
+    transform: translateX(150%);
+    transition: all 1250ms ease-in-out;
+}
+
+.notify-bar {
+    position: absolute;
+    bottom: .5%;
+    left: 0;
+    width: 100%;
+    height: .25rem;
+    background: rgba(0, 0, 0, 0.405);
+}
+
+.bar-fill {
+    width: 100%;
+    height: .25rem;
+    width: 50%;
+}
+
+.notification span {
+    font-size: .9rem;
+}
+
+.notification i {
+    font-size: 1.15rem;
+}
+
+.success {
+    background: linear-gradient(180deg, #000000 0%, hsla(125, 49%, 23%, 0.9) 99%);
+}
+
+.info {
+    background: linear-gradient(180deg, #000000 0%, hsla(280, 49%, 23%, 0.9) 99%);
+}
+
+.warning {
+    background: linear-gradient(180deg, #000000 0%, hsla(0, 49%, 23%, 0.9) 99%);
+}
+
+.info i {
+    color: var(--info);
+    text-shadow: 0px 0px 1.25vw var(--info), 0px 0px 1.5vw var(--info), 0px 0px 1.5vw var(--info), 0px 0px 1.5vw var(--info), 0px 0px 1.5vw var(--info), 0px 0px 1.5vw var(--info), 0px 0px 1vw var(--info);
+}
+
+.info .bar-fill {
+    background: var(--info);
+    box-shadow: 0 0 .25rem var(--info);
+}
+
+.warning i {
+    color: var(--warning);
+    text-shadow: 0px 0px 1.25vw var(--warning), 0px 0px 1.5vw var(--warning), 0px 0px 1.5vw var(--warning), 0px 0px 1.5vw var(--warning), 0px 0px 1.5vw var(--warning), 0px 0px 1.5vw var(--warning), 0px 0px 1vw var(--warning);
+}
+
+.warning .bar-fill {
+    background: var(--warning);
+    box-shadow: 0 0 .25rem var(--warning);
+}
+
+.success i {
+    color: var(--success);
+    text-shadow: 0px 0px 1.25vw var(--success), 0px 0px 1.5vw var(--success), 0px 0px 1.5vw var(--success), 0px 0px 1.5vw var(--success), 0px 0px 1.5vw var(--success), 0px 0px 1.5vw var(--success), 0px 0px 1vw var(--success);
+}
+
+.success .bar-fill {
+    background: var(--success);
+    box-shadow: 0 0 .25rem var(--success);
+}
+
+.slide-down {
+    animation: slide-down 1s ease;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(2%) translateX(0);
+    }
+}
