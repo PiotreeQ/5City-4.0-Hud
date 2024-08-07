@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 author 'piotreq'
-description '5City 4.0 Hud'
+description '5City 4.0 Hud [discord.gg/piotreqscripts]'
 lua54 'yes'
 
 client_scripts {

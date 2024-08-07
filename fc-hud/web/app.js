@@ -1,3 +1,5 @@
+// discord.gg/piotreqscripts
+
 const showNotification = ((data) => {
     const $newNotify = $(`
     <div class="notification ${data.type}">

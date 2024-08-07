@@ -47,7 +47,6 @@ function SetupHud()
 end
 
 function ToggleHUD()
-    print(hudState)
     SendNUIMessage({action = 'ToggleHud', state = not hudState})
     hudState = not hudState
 end
