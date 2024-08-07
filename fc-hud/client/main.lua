@@ -102,7 +102,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        local isTalking = NetworkIsPlayerTalking(PlayerId())
+        local isTalking = NetworkIsPlayerTalking(cache.playerId)
         if type(isTalking) == 'number' and isTalking == 1 then
             isTalking = true
         end
